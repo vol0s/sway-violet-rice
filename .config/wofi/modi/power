@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# A rofi-like System/Exit menu for wofi
+
+# wofi crashes w/ no cache file, so let's use a custom one and delete it every time, to avoid reordering entries
+rm "$HOME"/.local/share/wofi/exit.cache
+
+A=$(wofi --show dmenu --cache-file=$HOME/.local/share/wofi/exit.cache --prompt=System cat <<EOF
+Lock
+Logout
+Reboot
+Suspend
+Shutdown
+EOF
+)
+
+case "$A" in
+
+    Lock) swaylock -f -c 000000 ;;
+
+    Logout) swaymsg exit;;
+
+    Reboot) systemctl reboot ;;
+
+    Suspend) systemctl suspend ;;
+
+    Shutdown) systemctl -i poweroff ;;
+
+esac
+
+exit 0

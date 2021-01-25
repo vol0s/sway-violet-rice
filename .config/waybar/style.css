@@ -1,0 +1,199 @@
+
+/* COLOR DEFINITIONS*/
+
+@define-color light #ebdbb2;
+@define-color dark #282828;
+
+@define-color dark-violett #23003a;
+@define-color violett #430061;
+@define-color light-violett #580088;
+@define-color light-light-violett #6e00a1;
+@define-color dark-pinkk #8d00c1;
+@define-color pinkk #c700ef;
+@define-color light-pinkk #ff00fe;
+
+@define-color spoti-green #07AD3F;
+
+/* RESET */
+
+* {
+    border:        none;
+    border-radius: 0;
+    font-size:     12px;
+    font-family: Noto Sans;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+}
+
+/* GENERAL */
+
+window {
+    color:      rgba(217, 216, 216, 1);
+    background: rgba(15, 14, 14, 0.45);
+}
+
+window#waybar.solo {
+    color:      rgba(217, 216, 216, 1);
+    background: rgba(15, 14, 14, 0.8);
+}
+
+/* WORKSPACES */
+
+#workspaces {
+    margin: 0 10px;
+}
+
+#workspaces button {
+    padding:    0 25px;
+    color:      rgba(217, 216, 216, 0.4);
+}
+
+#workspaces button.visible {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#workspaces button.focused {
+    border-top: 3px solid rgba(217, 216, 216, 1);
+    border-bottom: 3px solid rgba(217, 216, 216, 0);
+}
+
+#workspaces button.urgent {
+    color:      rgba(238, 46, 36, 1);
+}
+
+/* MODULES */
+
+.modules-right {
+    border-bottom: solid 2px transparent;
+}
+
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #custom-myip {
+    padding:     0px 6px 0px 6px;
+    min-width:  25px;
+}
+
+#custom-spotify {
+    color: white;
+    background-color: @spoti-green;
+}
+
+#pulseaudio {
+    color: white;
+    background-color: @dark-pinkk;
+}
+
+#custom-weather {
+    color: white;
+    background-color: @violett;
+}
+
+#cpu {
+    color: white;
+    background-color: darkmagenta;
+}
+
+#memory {
+    color: white;
+    background-color: @violett;
+}
+
+#custom-storage {
+    color: white;
+    background-color: @dark-pinkk;
+}
+
+
+#custom-myip {
+    color: white;
+    background-color: @violett;
+}
+
+#network {
+    background-color: darkmagenta;
+    color: white;
+}
+
+#battery {
+    background-color: @violett;
+}
+
+#battery.warning {
+   color:       rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color:      rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#clock {
+    padding:     0px 16px 0px 6px;
+    background: @dark-violett;
+    color: @light;
+}
+
+/* ARROWS */
+
+#custom-arrow1 {
+    font-size: 22px;
+    color: @spoti-green;
+    background: transparent;
+}
+
+#custom-arrow2 {
+    font-size: 22px;
+    color: @dark-pinkk ;
+    background: @spoti-green;
+}
+
+#custom-arrow3 {
+    font-size: 22px;
+    color: @violett;
+    background: @dark-pinkk;
+}
+
+#custom-arrow4 {
+    font-size: 22px;
+    color: darkmagenta;
+    background: @violett;
+}
+
+#custom-arrow5 {
+    font-size: 22px;
+    color: @violett;
+    background: darkmagenta;
+}
+
+#custom-arrow6 {
+    font-size: 22px;
+    color: @dark-pinkk;
+    background: @violett;
+}
+
+#custom-arrow7 {
+    font-size: 22px;
+    color: @violett;
+    background-color: @dark-pinkk;
+}
+
+#custom-arrow8 {
+    font-size: 22px;
+    color: darkmagenta;
+    background-color: @violett;
+}
+
+#custom-arrow9 {
+    font-size: 22px;
+    color: @violett;
+    background-color: darkmagenta;
+}
+
+#custom-arrow10 {
+    font-size: 22px;
+    color: @dark-violett;
+    background-color: @violett;
+}

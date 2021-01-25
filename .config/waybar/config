@@ -1,0 +1,223 @@
+{
+
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "bottom",
+    "position": "top",
+    "height": 28,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+        "tray",
+        "custom/arrow1",
+        "custom/spotify",
+        "custom/arrow2",
+        "pulseaudio", 
+        "custom/arrow3",
+        "custom/weather",
+        "custom/arrow4",
+        "cpu",  
+        "custom/arrow5",
+        "memory",
+        "custom/arrow6",
+        "custom/storage",
+        "custom/arrow7",
+        "custom/myip", 
+        "custom/arrow8",
+        "network", 
+        "custom/arrow9",
+        "battery", 
+        "custom/arrow10",
+        "clock"
+    ],
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "sway/workspaces": {
+        "format": "{name}",
+    },
+
+    "sway/mode": {
+        "format": "  {}"
+    },
+
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%d/%m/%y - %H:%M}",
+        "tooltip": false
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
+        "interval": 1,
+        "states": {
+            "warning": 30,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format": "{icon} {ipaddr}/{cidr}",
+        "format-icons": {
+            "wifi": ["", "" ,""],
+            "ethernet": [""],
+            "disconnected": [""]
+        },
+        "on-click": "kitty -e nmtui",
+        "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "interval": 30,
+        "format-icons": {
+            "enabled": "",
+            "disabled": ""
+        },
+        "tooltip-format": "{status}",
+        "on-click": "kitty -e blueman-manager"
+    }
+
+    "cpu": {
+        "format": " {}%"
+    },
+
+    "memory": {
+        "format": " {}%"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+    },
+
+    "custom/storage": {
+        "format": " {percentage}%",
+        "format-alt": " {}",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
+
+    "custom/weather": {
+        "format": "{} ",
+        "interval": 1800,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/weather.sh",
+        "exec-if": "ping wttr.in -c1"
+    },
+
+    "custom/myip": {
+        "format": "{} ",
+        "interval": 1800,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/myip.sh",
+        "exec-if": "ping ip.me -c1"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    },
+
+    "custom/mail": {
+        "format": " ",
+        "format-alt": "{alt}  ",
+        "format-alt-click": "click-right",
+        "interval": 60,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/mail.py",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 18
+    },
+    
+    "custom/arrow1": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/arrow2": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow3": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow4": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow5": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow6": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow7": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow8": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow9": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow10": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow11": {
+        "format": "",
+        "tooltip": false
+    }
+}

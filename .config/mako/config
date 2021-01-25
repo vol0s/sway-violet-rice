@@ -1,0 +1,17 @@
+font=Sans 11
+width=350
+padding=10
+margin=10
+border-size=2
+default-timeout=5000
+icons=1
+actions=1
+
+background-color=#0f0e0e
+border-color=#8d00c1
+text-color=#d9d8d8
+progress-color=#444444
+
+[urgency=high]
+border-color=#ee2e24
+ignore-timeout=1
