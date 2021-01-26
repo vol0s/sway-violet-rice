@@ -17,6 +17,7 @@ CLUTTER_BACKEND=wayland
 
 # Plugins
 plugins=(git sudo systemd zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 

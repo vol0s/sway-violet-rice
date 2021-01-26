@@ -1,7 +1,7 @@
 # Variables
 
 set $mod Mod4
-set $lock swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2 --show-failed-attempts -K
+set $lock swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 5 --fade-in 0.2 --show-failed-attempts -K
 set $power ~/.config/wofi/modi/power
 set $wifi kitty nmtui
 set $bt blueman-manager
@@ -118,8 +118,8 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Idle configuration
 exec swayidle \
-    timeout 300 'exec $lock' \
-    #timeout 600 'swaymsg "output * dpms off"' \
+    timeout 1800 'exec $lock' \
+    #timeout 2400 'swaymsg "output * dpms off"' \
     #after-resume 'swaymsg "output * dpms on"' \
     before-sleep 'exec $lock'
 
@@ -184,9 +184,7 @@ bindsym $mod+Shift+F11  move container to workspace $wsF11
 bindsym $mod+Shift+F12  move container to workspace $wsF12
 
 bindsym ctrl+Alt+Right workspace next_on_output
-bindsym ctrl+Alt+$right workspace next_on_output
 bindsym ctrl+Alt+Left workspace prev_on_output
-bindsym ctrl+Alt+$left workspace prev_on_output
 
 # Layout stuff:
 

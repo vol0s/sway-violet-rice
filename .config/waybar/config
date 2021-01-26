@@ -89,7 +89,7 @@
         },
         "tooltip-format": "{status}",
         "on-click": "kitty -e blueman-manager"
-    }
+    },
 
     "cpu": {
         "format": " {}%"
