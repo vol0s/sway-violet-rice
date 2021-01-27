@@ -119,8 +119,8 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Idle configuration
 exec swayidle \
     timeout 1800 'exec $lock' \
-    #timeout 2400 'swaymsg "output * dpms off"' \
-    #after-resume 'swaymsg "output * dpms on"' \
+    timeout 2400 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
     before-sleep 'exec $lock'
 
 # Move your focus around
