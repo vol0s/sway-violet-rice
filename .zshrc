@@ -28,7 +28,7 @@ VISUAL="nano"
 GTK_THEME=Materia-dark-compact
 
 # Alias
-source ~/.config/zsh/aliases.conf
+source ~/.config/zsh/alias.conf
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
