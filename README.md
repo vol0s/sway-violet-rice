@@ -1,7 +1,7 @@
 # Violet SwayWM Ricing Dots (VSRD) 
 ---
 
-![Screenshot](background.png)
+![Screenshot](https://github.com/vol0s/sway-violet-rice/blob/main/desktop.png)
 
 Dotfiles for my sway arch linux configuration, violet falvour. :rice_ball:
 
