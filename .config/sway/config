@@ -7,14 +7,10 @@ set $wifi kitty nmtui
 set $bt blueman-manager
 set $term kitty
 
-# set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
-# set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
 set $menu dmenu_path | wofi --show drun -iI | xargs swaymsg exec --
 set $screenshot grim ~/Pictures/screenshots/scrn-$(date +"%d-%m-%Y-%H-%M-%S").png
 set $screenclip slurp | grim -g - ~/Pictures/screenshots/scrn-$(date +"%d-%m-%Y-%H-%M-%S").png
 set $background ~/.images/AbstractViolet.png
-
-##9e00dc
 
 set $cl_high #8d00c1
 set $cl_indi #d9d8d8
@@ -53,7 +49,7 @@ set $wsF11 21:21
 set $wsF12 22:22
 
 # Font
-# font Not Sans 12
+# font Noto Sans 12
 
 # Window borders
 default_border pixel 1
@@ -85,7 +81,7 @@ assign [class="^Qutebrowser$"] $wsF2
 assign [class="^Bitwarden$"] $wsF3
 
 # CAJA Settings
-for_window [app_id="caja"] floating enable
+for_window [class="Caja$"] floating enable
 bindsym $mod+k exec caja
 
 # Shortcuts
@@ -245,5 +241,3 @@ exec --no-startup-id mako
 exec_always autotiling
 exec_always ~/.config/waybar/waybar.sh
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-
-include ~/.config/sway/$(hostname)/*
